@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taelan | Estudante de Engenharia de Software</title>
+<meta name="description" content="Portfólio de Taelan: zelador de condomínio e estudante de Engenharia de Software, construindo a transição para a área de TI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --concreto:#E4E7EA;
+  --papel:#F5F6F7;
+  --tinta:#14213D;
+  --amarelo:#F2B705;
+  --cinza:#5B6573;
+  --linha:#C3C9D0;
+  --titulo:'Archivo',system-ui,'Segoe UI',Arial,sans-serif;
+  --texto:'Newsreader',Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--concreto);color:var(--tinta);font-family:var(--texto);font-size:1.125rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+
+header.topo{padding:1.25rem 0;border-bottom:2px solid var(--tinta)}
+header.topo .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.marca{font-family:var(--titulo);font-weight:800;font-size:1.15rem;text-decoration:none}
+nav a{font-family:var(--titulo);font-weight:500;font-size:.95rem;text-decoration:none;margin-left:1.25rem;padding-bottom:2px;border-bottom:2px solid transparent}
+nav a:hover{border-bottom-color:var(--amarelo)}
+
+.hero{padding:4.5rem 0 4rem}
+.hero .wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;align-items:center}
+h1{font-family:var(--titulo);font-weight:800;font-size:clamp(2.2rem,5.2vw,3.9rem);line-height:1.05;letter-spacing:-.02em}
+.hero p.sub{margin-top:1.5rem;max-width:34rem;font-size:1.25rem;color:var(--cinza)}
+.botoes{margin-top:2rem;display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{font-family:var(--titulo);font-weight:800;font-size:.95rem;text-decoration:none;padding:.8rem 1.3rem;border:2px solid var(--tinta);display:inline-block}
+.btn.cheio{background:var(--tinta);color:var(--papel)}
+.btn.cheio:hover{background:var(--amarelo);color:var(--tinta)}
+.btn.vazio:hover{background:var(--tinta);color:var(--papel)}
+
+/* placa de obra */
+.placa{background:var(--amarelo);border:4px solid var(--tinta);padding:1.5rem;font-family:var(--titulo);transform:rotate(2deg);box-shadow:8px 8px 0 var(--tinta)}
+.placa h2{font-size:1.6rem;font-weight:800;line-height:1.1;margin-bottom:1rem}
+.placa ul{list-style:none;font-weight:500;font-size:1rem}
+.placa li{padding:.45rem 0;border-top:2px solid var(--tinta)}
+.placa li b{font-weight:800}
+
+section{padding:4rem 0;border-top:2px solid var(--tinta)}
+section.claro{background:var(--papel)}
+h2.sec{font-family:var(--titulo);font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.01em;margin-bottom:1.5rem}
+.texto{max-width:40rem}
+.texto p+p{margin-top:1rem}
+
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.5rem;list-style:none}
+.tags li{font-family:var(--titulo);font-weight:500;font-size:.95rem;border:2px solid var(--tinta);padding:.35rem .8rem;background:var(--concreto)}
+.tags li.andamento{border-style:dashed}
+.legenda{margin-top:1rem;font-size:1rem;color:var(--cinza)}
+
+.projetos{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.5rem;margin-top:1rem}
+.proj{border:2px solid var(--tinta);background:var(--concreto);padding:1.5rem;display:flex;flex-direction:column;gap:.75rem}
+.proj h3{font-family:var(--titulo);font-weight:800;font-size:1.25rem;line-height:1.2}
+.proj p{font-size:1.05rem;flex:1}
+.status{font-family:var(--titulo);font-weight:800;font-size:.85rem;padding:.2rem .6rem;align-self:flex-start;border:2px solid var(--tinta)}
+.status.ok{background:var(--amarelo)}
+.proj a.link{font-family:var(--titulo);font-weight:800;font-size:.95rem}
+.proj.espera{border-style:dashed;background:transparent}
+
+.contato ul{list-style:none;margin-top:1rem}
+.contato li{padding:.9rem 0;border-top:1px solid var(--linha);display:flex;gap:1.25rem;flex-wrap:wrap}
+.contato li:last-child{border-bottom:1px solid var(--linha)}
+.contato span{font-family:var(--titulo);font-weight:500;min-width:6rem;color:var(--cinza)}
+.contato a{font-weight:500}
+
+footer{padding:2rem 0;border-top:2px solid var(--tinta);font-size:.95rem;color:var(--cinza)}
+
+@media (max-width:760px){
+  .hero{padding:3rem 0}
+  .hero .wrap{grid-template-columns:1fr;gap:2.5rem}
+  .placa{transform:none}
+  nav a{margin:0 1rem 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#topo">Taelan</a>
+    <nav aria-label="Principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#aprendendo">Aprendendo</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Hoje cuido de prédio. Estudo para construir software.</h1>
+        <p class="sub">Sou zelador de condomínio e aluno de Engenharia de Software. Este site mostra o que já aprendi e cada projeto novo que eu colocar no ar.</p>
+        <div class="botoes">
+          <a class="btn cheio" href="#projetos">Ver projetos</a>
+          <a class="btn vazio" href="#contato">Falar comigo</a>
+        </div>
+      </div>
+      <aside class="placa" aria-label="Situação atual">
+        <h2>Perfil em obra</h2>
+        <ul>
+          <li><b>Curso:</b> Eng. de Software (Anhanguera)</li>
+          <li><b>Foco:</b> entrar na área de TI</li>
+          <li><b>Projetos no ar:</b> 1 (este site)</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <section id="sobre" class="claro">
+    <div class="wrap">
+      <h2 class="sec">Sobre mim</h2>
+      <div class="texto">
+        <p>Trabalho como zelador de condomínio. É um trabalho de rotina, responsabilidade e resolver problema na hora, e levo isso para os estudos.</p>
+        <p>Faço faculdade de Engenharia de Software porque quero migrar para a área de TI. Estou começando do zero, aprendendo aos poucos e publicando o que eu construo pelo caminho. Também aprendo a usar ferramentas de IA no dia a dia de estudo e de projeto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="aprendendo">
+    <div class="wrap">
+      <h2 class="sec">O que estou aprendendo</h2>
+      <ul class="tags">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git e GitHub</li>
+        <li>Python</li>
+        <li class="andamento">JavaScript</li>
+        <li class="andamento">Ferramentas de IA</li>
+      </ul>
+      <p class="legenda">Borda cheia: já usei em projeto. Borda tracejada: estudando agora.</p>
+    </div>
+  </section>
+
+  <section id="projetos" class="claro">
+    <div class="wrap">
+      <h2 class="sec">Projetos</h2>
+      <div class="projetos">
+        <article class="proj">
+          <span class="status ok">No ar</span>
+          <h3>Portfólio pessoal</h3>
+          <p>Este site, feito em HTML e CSS puros e publicado no GitHub Pages.</p>
+          <!-- TROQUE seu-usuario pelo seu usuário do GitHub -->
+          <a class="link" href="https://github.com/seu-usuario/portfolio">Ver código no GitHub</a>
+        </article>
+        <article class="proj espera">
+          <span class="status">Em breve</span>
+          <h3>Gerenciador de tarefas</h3>
+          <p>Programa em Python para terminal: adicionar, listar e concluir tarefas.</p>
+        </article>
+        <article class="proj espera">
+          <span class="status">Em breve</span>
+          <h3>Calculadora de preço e lucro</h3>
+          <p>Calcula custo, margem e preço de venda de um produto.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="wrap">
+      <h2 class="sec">Contato</h2>
+      <div class="texto"><p>Quer trocar ideia sobre TI, estágio ou projeto? Me chama.</p></div>
+      <!-- TROQUE os três links abaixo pelos seus -->
+      <ul>
+        <li><span>GitHub</span><a href="https://github.com/seu-usuario">github.com/seu-usuario</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/seu-perfil">linkedin.com/in/seu-perfil</a></li>
+        <li><span>E-mail</span><a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Feito por Taelan. Atualizado conforme eu aprendo.</div>
+</footer>
+
+</body>
+</html>
